@@ -25,6 +25,10 @@ export function AuthProvidedr({ children }) {
         return auth.signOut()
     }
 
+    const forgotPassword =(email)=>{
+        return auth.sendPasswordResetEmail(email)
+    }
+
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(user => {
             setCurrentUser(user)
@@ -38,7 +42,8 @@ export function AuthProvidedr({ children }) {
         currentUser,
         signup,
         login,
-        logout
+        logout,
+        forgotPassword
     }
 
     return (
