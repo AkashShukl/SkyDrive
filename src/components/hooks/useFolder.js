@@ -83,7 +83,7 @@ export function useFolder(folderId = null, folder = null) {
     return database.folders
       .where("parentId", "==", folderId)
       .where("userId", "==", currentUser.uid)
-      //.orderBy("createdAt")
+      .orderBy("createdAt")
       .onSnapshot((snapshot) => {
         dispatch({
           type: ACTIONS.SET_CHILD_FOLDERS,

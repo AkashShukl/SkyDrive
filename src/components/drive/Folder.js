@@ -16,7 +16,7 @@ export default function Folder({ folder }) {
       as={Link}
     >
       <FontAwesomeIcon icon={faFolder} className="mr-2" />
-      {folder.name}
+        { folder.name }
     </Button>
   );
 }
