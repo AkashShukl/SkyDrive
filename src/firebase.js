@@ -1,5 +1,6 @@
-import firebase from 'firebase/app';
+import firebase from "firebase/app";
 import "firebase/auth";
+import "firebase/firestore";
 
 // const app = firebase.initializeApp({
 //     apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -10,15 +11,24 @@ import "firebase/auth";
 //     appId: process.env.REACT_APP_FIREBASE_APP_ID
 // })
 
-
 const app = firebase.initializeApp({
-    apiKey: "AIzaSyC_YlC4IsC1qGxjFGTVTW9cxkfZnUV5nP0",
-    authDomain: "junkbox-v1.firebaseapp.com",
-    projectId: "junkbox-v1",
-    storageBucket: "junkbox-v1.appspot.com",
-    messagingSenderId: "741768435781",
-    appId: "1:741768435781:web:0140cea603d680978eeb2c"
+  apiKey: "AIzaSyC_YlC4IsC1qGxjFGTVTW9cxkfZnUV5nP0",
+  authDomain: "junkbox-v1.firebaseapp.com",
+  projectId: "junkbox-v1",
+  storageBucket: "junkbox-v1.appspot.com",
+  messagingSenderId: "741768435781",
+  appId: "1:741768435781:web:0140cea603d680978eeb2c",
 });
 
+export const firestore = app.firestore();
+export const database = {
+  folders: firestore.collection("folders"),
+  files: firestore.collection("files"),
+  formatDoc: (doc) => {
+    return { id: doc.id, ...doc.data() };
+  },
+  getCurrentTimestamp: firebase.firestore.FieldValue.serverTimestamp,
+};
 export const auth = app.auth();
+//export const storage = app.storage;
 export default app;
