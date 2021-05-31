@@ -39,7 +39,7 @@ export default function AddFolderBtn({ currentFolder }) {
   };
 
   return (
-    <>
+    <label className=" btn-sm ">
       <Button onClick={openModal} variant="outline-success" size="sm">
         <FontAwesomeIcon icon={faFolderPlus} />
       </Button>
@@ -66,6 +66,6 @@ export default function AddFolderBtn({ currentFolder }) {
           </Modal.Footer>
         </Form>
       </Modal>
-    </>
+    </label>
   );
 }
