@@ -1,3 +1,15 @@
+# SkyDrive is a Cloud file storage and retrieval service inspired by Google Drive.
+### Skydrive is a personal project which is a result of curiosity and passion. 
+### The main purpose of creating SkyDrive is to gain in-depth knowledge in React and Frontend Development in general.
+### I have taken inspirations from all over the internet and tried to give some personal touches to the application 
+### It is an ongoing project hence there will be continuous upgrades to the web application.
+### If anyone wants to copy the project or clone it for learning, or if you find it interesting please STAR mark the project as it will definitely give me a boost. 
+
+Thanks!
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
