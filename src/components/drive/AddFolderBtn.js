@@ -26,7 +26,7 @@ export default function AddFolderBtn({ currentFolder }) {
     if (currentFolder !== ROOT_FOLDER) {
       path.push({ name: currentFolder.name, id: currentFolder.id });
     }
-
+    console.log(path)
     database.folders.add({
       name: name,
       userId: currentUser.uid,

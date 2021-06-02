@@ -11,6 +11,7 @@ import { ROOT_FOLDER } from "../hooks/useFolder";
 export default function AddFileBtn({ currentFolder }) {
   const [uploadingFiles, setUploadingFiles] = useState([]);
   const { currentUser } = useAuth();
+
   const handleUpload = (e) => {
     const file = e.target.files[0];
     if (currentFolder == null || file === null) return;

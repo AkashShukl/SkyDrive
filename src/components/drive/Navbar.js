@@ -6,7 +6,7 @@ export default function NavbarComp() {
   return (
     <Navbar
       bg="light"
-      style={{ "justify-content": "space-between", padding: "10px" }}
+      style={{ "justifyContent": "space-between", padding: "10px" }}
     >
       <Navbar.Brand as={Link} to="/">
         SkyDrive
