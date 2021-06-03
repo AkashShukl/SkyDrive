@@ -23,13 +23,21 @@ export default function Dashboard() {
       <Navbar />
       <Container fluid>
         <Row>
-          <Col sm={2} className="sidebar">
-            <Nav className="flex-column align-items-left">
+          <Col sm={2}>
+            <Nav  className="flex-column align-items-left sidebar">
               <Nav>
                 <AddFolderBtn currentFolder={folder} />
               </Nav>
               <Nav>
                 <AddFileBtn currentFolder={folder} />
+              </Nav>
+              <Nav>
+               <br/> 
+               <br/>
+               <br/> 
+               <br/>
+               <br/> 
+               <br/>
               </Nav>
             </Nav>
           </Col>

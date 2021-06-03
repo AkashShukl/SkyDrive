@@ -1,3 +1,4 @@
-.breadcrumbs{
-    border: solid 2px black;
+.sidebar{
+    border-right: solid 2px grey;
+    height:100%;
 }
