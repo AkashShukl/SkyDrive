@@ -8,7 +8,7 @@ export default function FolderBreadcrumbs({ currentFolder }) {
   if (currentFolder) path = [...path, ...currentFolder.path];
 
   return (
-    <Breadcrumb className="flex-grow-1 n-0">
+    <Breadcrumb className="flex-grow-1 n-0 " >
       {[...path].map((folder, index) => (
         <Breadcrumb.Item
           style={{ maxWidth: "150px" }}

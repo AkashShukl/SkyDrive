@@ -39,10 +39,10 @@ export default function AddFolderBtn({ currentFolder }) {
   };
 
   return (
-    <label className=" btn-sm ">
-      <Button onClick={openModal} variant="outline-success" size="sm">
-        <FontAwesomeIcon icon={faFolderPlus} />
-      </Button>
+    <label className>
+    <label onClick={openModal} className="btn btn-sm  mr-2">
+        <FontAwesomeIcon icon={faFolderPlus}/> Add Folder
+    </label>
       <Modal show={open} onHide={closeModal}>
         <Form onSubmit={handleSubmit}>
           <Modal.Body>

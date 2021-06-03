@@ -72,8 +72,8 @@ export default function AddFileBtn({ currentFolder }) {
   };
   return (
     <>
-      <label className="btn btn-outline-success btn-sm m-0 mr-2">
-        <FontAwesomeIcon icon={faFileUpload}></FontAwesomeIcon>
+      <label className="btn btn-sm  mr-2">
+        <FontAwesomeIcon icon={faFileUpload}/> Add File
         <input
           type="file"
           onChange={handleUpload}
