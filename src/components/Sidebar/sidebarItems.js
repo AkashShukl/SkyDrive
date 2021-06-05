@@ -1,43 +1,31 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFolderPlus } from "@fortawesome/free-solid-svg-icons";
-import { useFolder } from "../hooks/useFolder";
+import { faDatabase, faFolderPlus, faInfoCircle, faSignOutAlt, faUserCircle } from "@fortawesome/free-solid-svg-icons";
+
 
 export  const sidebarItems = [
   {
     title: "Home",
     path: "/",
-    icon: <FontAwesomeIcon icon={faFolderPlus} />,
+    icon: <FontAwesomeIcon icon={faDatabase} />,
     cName: "sidenav-text",
   },
   {
-    title: "Reports",
-    path: "/reports",
-    icon: <FontAwesomeIcon icon={faFolderPlus} />,
-    cName: "sidenav-text",
-  },
-  {
-    title: "Products",
-    path: "/products",
-    icon: <FontAwesomeIcon icon={faFolderPlus} />,
-    cName: "sidenav-text",
-  },
-  {
-    title: "Team",
+    title: "Info",
     path: "/team",
-    icon: <FontAwesomeIcon icon={faFolderPlus} />,
+    icon: <FontAwesomeIcon icon={faInfoCircle} />,
     cName: "sidenav-text",
   },
   {
-    title: "Messages",
+    title: "Profile",
     path: "/messages",
-    icon: <FontAwesomeIcon icon={faFolderPlus} />,
+    icon: <FontAwesomeIcon icon={faUserCircle} />,
     cName: "sidenav-text",
   },
   {
-    title: "Support",
+    title: "Logout",
     path: "/support",
-    icon: <FontAwesomeIcon icon={faFolderPlus} />,
+    icon: <FontAwesomeIcon icon={faSignOutAlt} />,
     cName: "sidenav-text",
   },
 ];

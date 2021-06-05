@@ -13,13 +13,13 @@ function App() {
   return (
     <Router>
       <AuthProvidedr>
-        <Sidebar/>
+        <Sidebar />
         <Switch>
           <PrivateRoute exact path="/folder/:folderId" component={Dashboard} />
           <PrivateRoute exact path="/" component={Dashboard} />
-         
+
           <PrivateRoute exact path="/user" component={Profile} />
-          
+
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
           <Route path="/forgot-password" component={ForgotPassword} />

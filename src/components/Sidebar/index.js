@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faJedi, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { sidebarItems } from "./sidebarItems";
-import { Navbar } from "react-bootstrap";
+
 import "./style.css";
 
 export default function Sidebar() {
@@ -18,7 +18,7 @@ export default function Sidebar() {
           <FontAwesomeIcon icon={faBars} onClick={showSidebar} />
         </Link>
         <Link to="#" className="sidebar-text">
-          SkyDrive
+          <FontAwesomeIcon icon={faJedi}/>{" "}SkyDrive
         </Link>
       </div>
 
@@ -26,7 +26,7 @@ export default function Sidebar() {
         <ul className="sidenav-menu-items">
           <li className="sidenavbar-toggle">
             <Link to="#" className="menu-bars">
-              <FontAwesomeIcon icon={faBars} onClick={showSidebar} />
+              <FontAwesomeIcon icon={faTimes} onClick={showSidebar} />
             </Link>
           </li>
           {sidebarItems.map((item, index) => {
@@ -34,7 +34,7 @@ export default function Sidebar() {
               <li key={index} className={item.cName}>
                 <Link to={item.path}>
                   {item.icon}
-                  <span>{item.title}</span>
+                  <span className="icon-text">{item.title}</span>
                 </Link>
               </li>
             );
