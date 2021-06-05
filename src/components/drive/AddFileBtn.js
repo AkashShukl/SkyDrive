@@ -1,4 +1,4 @@
-import { faFileUpload } from "@fortawesome/free-solid-svg-icons";
+import { faFileUpload, faUpload } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { ProgressBar, Toast } from "react-bootstrap";
@@ -73,7 +73,7 @@ export default function AddFileBtn({ currentFolder }) {
   return (
     <>
       <label className="btn btn-sm  mr-2">
-        <FontAwesomeIcon icon={faFileUpload}/> Add File
+        <FontAwesomeIcon color="white" size="3x" icon={faUpload}/> 
         <input
           type="file"
           onChange={handleUpload}

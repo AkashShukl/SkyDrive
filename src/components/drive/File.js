@@ -1,4 +1,4 @@
-import { faFile, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faDoorOpen, faFile, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Fade } from "react-bootstrap";
 import React, { useState } from "react";
@@ -21,7 +21,7 @@ export default function File({ file }) {
         variant="outline-info"
         className=" text-truncate w-100"
       >
-        <FontAwesomeIcon icon={faFile} /> {file.name}
+       <div className="file-icon-name">  <FontAwesomeIcon size="3x" icon={faFile} /> <lable className="file-name"> {file.name} </lable> </div>
       </Button>
       <Fade
         onMouseEnter={() => setOpen(true)}
@@ -37,7 +37,7 @@ export default function File({ file }) {
             className=" btn"
             download
           >
-            Open
+          <FontAwesomeIcon size="1x" icon={faDoorOpen} />
           </a>
           <label
             className=" btn"

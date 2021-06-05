@@ -24,6 +24,7 @@ function App() {
           <Route path="/signup" component={Signup} />
           <Route path="/forgot-password" component={ForgotPassword} />
         </Switch>
+      
       </AuthProvidedr>
     </Router>
   );

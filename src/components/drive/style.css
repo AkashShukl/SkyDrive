@@ -1,0 +1,24 @@
+.folder-file-btn {
+  position: absolute;
+  bottom: 0;
+  background-color: #2e303d;
+  color: white;
+  height: 60px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-icon-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.file-name{
+    font-size: smaller;
+}
