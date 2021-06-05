@@ -7,11 +7,13 @@ import Login from "./authentication/Login";
 import PrivateRoute from "./authentication/PrivateRoute";
 import ForgotPassword from "./authentication/ForgotPassword";
 import Dashboard from "./drive/Dashboard";
+import Sidebar from "./Sidebar";
 
 function App() {
   return (
     <Router>
       <AuthProvidedr>
+        <Sidebar/>
         <Switch>
           <PrivateRoute exact path="/folder/:folderId" component={Dashboard} />
           <PrivateRoute exact path="/" component={Dashboard} />
