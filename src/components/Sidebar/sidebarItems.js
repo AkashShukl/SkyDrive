@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDatabase, faFolderPlus, faInfoCircle, faSignOutAlt, faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import { faDatabase, faInfoCircle, faSignOutAlt, faUserCircle } from "@fortawesome/free-solid-svg-icons";
 
 
 export  const sidebarItems = [
@@ -18,13 +18,13 @@ export  const sidebarItems = [
   },
   {
     title: "Profile",
-    path: "/messages",
+    path: "/user",
     icon: <FontAwesomeIcon icon={faUserCircle} />,
     cName: "sidenav-text",
   },
   {
     title: "Logout",
-    path: "/support",
+    path: "/user",
     icon: <FontAwesomeIcon icon={faSignOutAlt} />,
     cName: "sidenav-text",
   },

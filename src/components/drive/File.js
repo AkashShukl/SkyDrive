@@ -1,18 +1,58 @@
-import { faDoorOpen, faFile, faTrash } from "@fortawesome/free-solid-svg-icons";
+import {
+  faDoorOpen,
+  faFile,
+  faTimes,
+  faTrash,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Fade } from "react-bootstrap";
 import React, { useState } from "react";
 import { deleteFile } from "./DeleteFile";
+import "./style.css";
 
 export default function File({ file }) {
   const [open, setOpen] = useState(false);
+  const [openInfo, setOpenInfo] = useState(false);
+
+  console.log(file);
 
   const handleDelete = () => {
     deleteFile(file);
   };
 
+  const showInfo = () => {
+    setOpenInfo(!openInfo);
+  };
   return (
     <>
+      <div className={openInfo ? "file-info active" : "file-info"}>
+        <FontAwesomeIcon
+          id="file-info-close-btn"
+          onClick={showInfo}
+          size="1x"
+          icon={faTimes}
+        />
+        <div className="file-details">
+          <span>
+            <label>Name : </label>{" "}
+            <label className="truncate">{file.name}</label>
+          </span>
+          <span>
+            <label>Size :</label>{" "}
+            <label className="truncate">{file.size}</label>
+          </span>
+          <span>
+            <label>Url :</label>{" "}
+            <label className="truncate">
+              <a href={file.url}>Link</a>
+            </label>
+          </span>
+          <span>
+            <label>Created At : </label>{" "}
+            <label className="truncate">{toString(file.createdAt)}</label>
+          </span>
+        </div>
+      </div>
       <Button
         onMouseEnter={() => setOpen(true)}
         onMouseLeave={() => setOpen(false)}
@@ -20,8 +60,13 @@ export default function File({ file }) {
         aria-expanded={open}
         variant="outline-info"
         className=" text-truncate w-100"
+        onClick={showInfo}
       >
-       <div className="file-icon-name">  <FontAwesomeIcon size="3x" icon={faFile} /> <lable className="file-name"> {file.name} </lable> </div>
+        <div className="file-icon-name">
+          {" "}
+          <FontAwesomeIcon size="3x" icon={faFile} />{" "}
+          <lable className="file-name text-truncate "> {file.name} </lable>{" "}
+        </div>
       </Button>
       <Fade
         onMouseEnter={() => setOpen(true)}
@@ -29,7 +74,7 @@ export default function File({ file }) {
         in={open}
         className="w-100"
       >
-        <div id="example-fade-text">
+        <div id="fade-file-options">
           <a
             href={file.url}
             rel="noopener noreferrer"
@@ -37,7 +82,7 @@ export default function File({ file }) {
             className=" btn"
             download
           >
-          <FontAwesomeIcon size="1x" icon={faDoorOpen} />
+            <FontAwesomeIcon size="1x" icon={faDoorOpen} />
           </a>
           <label
             className=" btn"
