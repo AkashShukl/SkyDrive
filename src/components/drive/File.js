@@ -65,7 +65,7 @@ export default function File({ file }) {
           <span>
             <label>Created At : </label>{" "}
             <label className="truncate">
-              { timestampToDate(file.createdAt.seconds) }
+              {file.createdAt !== null  && timestampToDate(file.createdAt.seconds) }
             </label>
           </span>
         </div>
