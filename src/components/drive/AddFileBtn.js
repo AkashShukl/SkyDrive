@@ -14,6 +14,7 @@ export default function AddFileBtn({ currentFolder }) {
 
   const handleUpload = (e) => {
     const file = e.target.files[0];
+    
     if (currentFolder == null || file === null) return;
 
     const id = uuidv4();
@@ -26,7 +27,7 @@ export default function AddFileBtn({ currentFolder }) {
         ? `${currentFolder.path.join("/")}/${file.name}`
         : `${currentFolder.path.join("/")}/${currentFolder.name}/${file.name}`;
 
-    console.log(currentUser.uid);
+    //console.log(currentUser.uid);
     const uploadTask = storage
       .ref(`/files/${currentUser.uid}/${filePath}`)
       .put(file);
@@ -62,6 +63,8 @@ export default function AddFileBtn({ currentFolder }) {
           database.files.add({
             url: url,
             name: file.name,
+            size :file.size,
+            type :file.type,
             createdAt: database.getCurrentTimestamp(),
             folderId: currentFolder.id,
             userId: currentUser.uid,

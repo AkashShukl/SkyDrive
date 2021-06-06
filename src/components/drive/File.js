@@ -23,6 +23,17 @@ export default function File({ file }) {
   const showInfo = () => {
     setOpenInfo(!openInfo);
   };
+
+  const timestampToDate = (seconds) => {
+    let ms = seconds * 1000;
+    let d = new Date(ms);
+    let todate = d.getDate();
+    let tomonth = d.getMonth() + 1;
+    let toyear = d.getFullYear();
+    let original_date = tomonth + "/" + todate + "/" + toyear;
+    return " " + original_date;
+  };
+
   return (
     <>
       <div className={openInfo ? "file-info active" : "file-info"}>
@@ -39,7 +50,11 @@ export default function File({ file }) {
           </span>
           <span>
             <label>Size :</label>{" "}
-            <label className="truncate">{file.size}</label>
+            <label className="truncate">{file.size} KB</label>
+          </span>
+          <span>
+            <label>Type :</label>{" "}
+            <label className="truncate">{file.type}</label>
           </span>
           <span>
             <label>Url :</label>{" "}
@@ -49,7 +64,9 @@ export default function File({ file }) {
           </span>
           <span>
             <label>Created At : </label>{" "}
-            <label className="truncate">{toString(file.createdAt)}</label>
+            <label className="truncate">
+              { timestampToDate(file.createdAt.seconds) }
+            </label>
           </span>
         </div>
       </div>

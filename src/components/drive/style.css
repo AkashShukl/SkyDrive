@@ -30,7 +30,7 @@
 }
 
 .file-info{
-  width: 350px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -67,7 +67,7 @@
 
 .truncate{
   white-space: nowrap;
-  width: 100px;
+  width: 200px;
   height: 30px; 
   display: inline-block;
   
