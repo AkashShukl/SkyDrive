@@ -50,7 +50,7 @@ export default function File({ file }) {
           </span>
           <span>
             <label>Size :</label>{" "}
-            <label className="truncate">{file.size} KB</label>
+            <label className="truncate">{file.size} Bytes</label>
           </span>
           <span>
             <label>Type :</label>{" "}
