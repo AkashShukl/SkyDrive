@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import { Card, Button, Alert, Container } from "react-bootstrap"
+import {  Button, Alert, Container } from "react-bootstrap"
 import { useAuth } from "../../contexts/AuthContext"
-import { Link, useHistory } from "react-router-dom"
+import {  useHistory } from "react-router-dom"
 
 export default function Profile() {
   const [error, setError] = useState("")

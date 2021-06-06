@@ -39,7 +39,7 @@ export default function AddFolderBtn({ currentFolder }) {
   };
 
   return (
-    <label className>
+    <label>
     <label onClick={openModal} className="btn btn-sm  mr-2">
         <FontAwesomeIcon  color="white" size ="3x" icon={faFolderPlus}/> 
     </label>

@@ -2,11 +2,11 @@ import {
   faDoorOpen,
   faFile,
   faTimes,
-  faTrash,
+  faTrash
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button, Fade } from "react-bootstrap";
 import React, { useState } from "react";
+import { Button, Fade } from "react-bootstrap";
 import { deleteFile } from "./DeleteFile";
 import "./style.css";
 
@@ -14,7 +14,7 @@ export default function File({ file }) {
   const [open, setOpen] = useState(false);
   const [openInfo, setOpenInfo] = useState(false);
 
-  console.log(file);
+  //console.log(file);
 
   const handleDelete = () => {
     deleteFile(file);
@@ -65,7 +65,8 @@ export default function File({ file }) {
           <span>
             <label>Created At : </label>{" "}
             <label className="truncate">
-              {file.createdAt !== null  && timestampToDate(file.createdAt.seconds) }
+              {file.createdAt !== null &&
+                timestampToDate(file.createdAt.seconds)}
             </label>
           </span>
         </div>
@@ -82,7 +83,7 @@ export default function File({ file }) {
         <div className="file-icon-name">
           {" "}
           <FontAwesomeIcon size="3x" icon={faFile} />{" "}
-          <lable className="file-name text-truncate "> {file.name} </lable>{" "}
+          <label className="file-name text-truncate "> {file.name} </label>{" "}
         </div>
       </Button>
       <Fade
